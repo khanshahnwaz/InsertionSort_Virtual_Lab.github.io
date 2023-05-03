@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.jsdelivr.net/gh/CDNSFree2/PrismJS@latest/prism.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Insertion Sort
+    </title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="shortcut icon" href="./Assets/college.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CDNSFree2/PrismJS@latest/prism.min.css">
+
+
+    <!-- Tailwind css CDN link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+
+<body>
+    <header>
+        <div>
+            <img class="logo" src="./Assets/college.png">
+            <h1>V-Lab @ ANDC</h1>
+        </div>
+        <ul class="navigation">
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../../index.html#labs_section">Labs</a></li>
+            <li><a href="../../../index.html#team">Team</a></li>
+            <li><a href="https://www.andcollege.du.ac.in/" target="_blank" rel="noopener noreferrer">College Website</a>
+            </li>
+        </ul>
+    </header>
+    <div class="exp-heading">
+        <h1 class="text-4xl tracking-wider font-bold">Insertion Sort</h1>
+    </div>
+    <nav id="nav">
+        <div class="boxq">
+            <a class="internal_link" href="#aim">
+                <img class="icon"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBmpbB3jSjMF-FDgIL1E-eRN6eeCDLSsvoAQ&usqp=CAU">
+                    <!-- <br> -->
+                <p>Aim</p>
+            </a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#theory">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/512/1648/1648697.png">
+                <p>Theory</p>
+            </a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#procedure">
+                <img class="icon"
+                    src="https://cdn4.iconfinder.com/data/icons/project-management-1-11/65/23-512.png">
+                    <p>Procedure</p></a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#practice">
+                <img class="icon"
+                    src="https://static.rfstat.com/renderforest/images/v2/landing-pics/logo-animation/editable-minimal.png?v=6">
+                    <p>Working</p>
+            </a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#simulation">
+                <img class="icon"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/110px-Python-logo-notext.svg.png">
+                    <p>Simulation</p></a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#quiz">
+                <img class="icon"
+                    src="https://img.favpng.com/21/11/8/new-york-city-fotolia-stock-photography-sales-png-favpng-f9ZiUMqBcZK0LNfZPfC674ZxZ_t.jpg">
+                    <p>Quiz</p>
+            </a>
+        </div>
+        <!-- <div class="boxq">
+            <a class="internal_link" href="#observation">
+                <img class="icon"
+                    src="https://img.freepik.com/free-vector/business-management-vector_53876-44131.jpg?size=338&ext=jpg"><br>
+                Observations</a>
+        </div> -->
+        <!-- <div class="boxq">
+            <a class="internal_link" href="#result">
+                <img class="icon"
+                    src="https://cdn4.iconfinder.com/data/icons/collection-of-online-business-icons/64/Board_Chart_Results_Business-512.png">
+                    <p>Result</p></a>
+        </div> -->
+        <div class="boxq">
+            <a class="internal_link" href="#references">
+                <img class="icon" src="https://image.pngaaa.com/134/5592134-middle.png">
+                <p>References</p></a>
+        </div>
+    </nav>
+    <section id="exp">
+        <div class="container">
+            <div class="box" id="aim">
+                <div class="title">
+                    <h2 class="heading">Aim</h2>
+                </div>
+                <div class="desc1">
+                    <p class="sm:p-5">
+                        Sorting is a fundamental task in computing, the aim of
+this expriment is to understand the working, implementation and different characteristics of 
+insertion sort with the help of examples and animations.
+                    </p>
+                </div>
+            </div>
+            <div class="box" id="theory">
+                <div class="title">
+                    <h1 class="heading">Theory</h1>
+                </div>
+                <div class="desc1">
+                  
+                    <div class='sm:flex justify-around pb-5 '>
+                        <div class=' p-5'>
+                        <!-- <h3 class='font-rubik text-center p-7 text-3xl tracking-wider text-slate-500'>Theory</h3> -->
+                        <p class='text-sm font-thin sm:text-lg '>Insertion sort is a simple sorting algorithm 
+                        that works similar to the way you sort playing cards in your hands. The array is 
+                        virtually split into a sorted and an unsorted part. Values from the unsorted part 
+                        are picked and placed at the correct position in the sorted part.</p><br/><br/>
+                        <h4 class='text-lg underline font-bold text-slate-500'>Charactertistic of Insertion Sort</h4>   
+                        <ul class='text-sm font-thin sm:text-lg list-disc list-inside'>
+                          <li>It is an efficient algorithm for sorting a small number of elements.</li>
+                          <li>It is an inplace algorithm i.e. it rearranges the number within an array.</li>
+                          <li>It is a stable algorithm i.e. it maintains the relative order of elements.</li>
+                          <li>It sorts the array in O(n<sup>2</sup>) time in worst case and in O(n) time in best case.</li>
+                          <li>Best case when the input array is already sorted.</li>
+                          <li>Worst case when the input array is in reverse order.</li>
+                          <li>The space complexity is O(1).</li>
+                        </ul><br />
+                        <h4 class='text-lg underline font-bold text-slate-500'>Insertion Sort Algorithm</h4>
+                        <small class='text-lg font-thin'>In order to sort an array in ascending order:</small>
+                        <ul class='text-sm font-thin sm:text-lg list-disc list-inside'>
+                          <li>Iterate from arr[1] to arr[n-1] over the array.</li>
+                          <li>Compare the current element (key) to its predecessor.</li>
+                          <li>If the key element is smaller than its predecessor, compare it to the elements before.</li>
+                          <li>Move the greater elements one position up to make space for the swapped element.</li>
+                        </ul><br />
+                        <h4 class='text-lg underline font-bold text-slate-500'>Example</h4>
+                        <small class='text-lg font-bold'>Input: </small> 
+                        <small class='text-lg font-thin'>15, 9, 30, 10, 1</small><br />
+                        <small class='text-lg font-bold'>Expected Output: </small> 
+                        <small class='text-lg font-thin'>1, 9, 10, 15, 30</small>
+                        </div>
+                        <img src='./Assets/Theory.jpg' alt="Sorting cards" class='object-scale-down' width=""/>
+                    </div>
+                    <!-- <img src='./Assets/Theory.jpg' alt=""/> -->
+
+                </div>
+            </div>
+           
+            <div class="box" id="practice">
+                <div class="title">
+                    <h2 class="heading">Working</h2>
+                </div>
+                <div class="sm:p-5 h-96 bg-[#001E25] rounded-xl  relative">
+                    <div class="word flex flex-wrap m-auto justify-center relative top-1/2  "></div>
+                <div class="absolute bottom-2 right-2 inline-block  m-auto   text-center text-2xl font-bold tracking-wider border-4 rounded-lg border-black px-4 py-2 text-white shadow-xl hover:opacity-50 bg-white">
+                    <!-- Welcome to our quiz! This is a fun and interactive way to test your knowledge on insertion sort algorithm. -->
+                    
+                    <a  href="./practice/index.html" target="_self"><h2 class="animate">Let's go</h2></a>
+                </div>
+                </div>
+              
+            </div>
+
+            <div class="box" id="procedure">
+                <div class="title">
+                    <h2 class="heading">Procedure</h2>
+                </div>
+                <div class="desc1">
+                    <div class="md:flex pb-5 h-3/5 static">
+                        <div class="m-0 p-2 sm:p-5 h-3/5 inline-block">
+                        
+                            <p class="px-8 font-medium text-base leading-loose">
+                              Simulation is divided into two modules. The first module allows the
+                              user to step-by-step analyze the working of the algorithm on arrays.
+                              In the next module, some exercises are provided so that the user can
+                              have a hands-on experience with the algorithm.
+                            </p>
+                  
+                          <div class="relative shadow-md px-8 py-4 rounded-3xl mr-6 bg-gradient-to-r m-5 flex justify-evenly">
+                            <div>
+                            <h2 class="text-lg underline text-stone-600 font-bold mb-3">
+                              Steps of Simulator:
+                            </h2>
+                            <ol class="text-lg list-decimal px-5">
+                            
+                              <li class="mb-1">
+                                The screen consists of three partitions, the input partition, the
+                                algorithm's code on the second partition, and the output on the
+                                third partition.
+                              </li>
+                              <li class="mb-1">
+                                Read the simulator details and enter the desired input for the
+                                number of elements in the array.
+                              </li>
+                              <li class='mb-1'>Enter the array size (maximum allowed size is 10).</li>
+                                      <li class='mb-1'>Click on Random elements to generate the array randomly.</li>
+                                      <li class='mb-1'>Click on Enter elements manually to manually enter the elements of the array.</li> 
+                              <li class="mb-1">
+                                Click <span class="font-semibold">Start</span> to begin the
+                                execution of code.
+                              </li>
+                              <li class="mb-1">
+                                The relevant line of the code will be highlighted as it executes.
+                              </li>
+                              <li class="mb-1">
+                                The local variables will be shown in the Output Panel with their
+                                values.
+                              </li>
+                            </ol></div>
+                            <img class="" src='./Assets/choices.jpg' alt="Procedure"></img>
+                          </div>
+                  
+                          <div class="relative shadow-md px-8 py-4 rounded-3xl mr-6 bg-gradient-to-r  mt-10 md:flex justify-evenly">
+                            <div>
+                            <h2 class="text-lg underline text-stone-600 font-bold mb-3">
+                              Try Yourself Module:
+                            </h2>
+                            <ol class="text-lg list-decimal px-5">
+                              <li class="mb-1">
+                                Click on <span class="font-semibold">Try Yourself</span> to
+                                try some exercises based on the algorithm.
+                              </li>
+                              <li class="mb-1">
+                                Select the exercise number from the left navigation pane.
+                              </li>
+                              <li class="mb-1">
+                                Type your answer in the highlighted text box.
+                              </li>
+                              <li class="mb-1">
+                                Click <span class="text-green-500">Submit Answer</span> to
+                                submit the answer.
+                              </li>
+                              <li class="mb-1">
+                                Click <span class="font-medium">Show Answer</span> to display
+                                the correct answer.
+                              </li>
+                            </ol></div>
+                            <img class="" src='./Assets/proc.png' alt="Procedure"></img>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+
+            <div class="box" id="simulation">
+                <div class="title">
+                    <h2 class="heading">Simulation</h2>
+                </div>
+               
+                <div class="md:p-5 md:grid grid-cols-2  space-between">
+                  <img src="./Assets/simulation.jpg" class="rounded-md shadow-md w-[80%]"/>
+                  <div class="">
+                    <div class="content">
+                    <h2>Benifits Of<br>Our Simulation</h2>
+
+                </div>
+                    <div class="text-justify tracking-wider">
+                    <p class="text-justify justify-both">You will see a line by line execution of code i.e. how each line of insertion sort algoritm affects the unsorted array in order to sort it. </p>
+                    <p class="text-justify
+                    ">Try Yourself section presents some incomplete code snippets. You will try and complete those.</p>
+                    <div class="mt-4 inline-block px-4 py-1 rounded-md shadow-md hover:opacity-50 cursor-pointer bg-[#001E25] text-white font-bold text-lg">
+                    <a  href="./simulation/index.html ">Try It</a></div>
+                </div>
+                  </div>
+                </div>
+                
+            </div>
+            
+            
+            <div class="box" id="quiz">
+                <div class="title">
+                    <h2 class="heading">Quiz</h2>
+                </div>
+                <div class="p-5">
+                    <h2>Welcome to our quiz preparation module! We want you to feel confident and well-prepared before you attempt our quiz. By completing the listed sections, you'll be well-prepared to tackle our quiz with confidence. We'll be with you every step of the way, providing clear instructions and guidance to help you succeed. Good luck, and have fun!</h2>
+
+                    <h3><b>Please check the boxes, only if you have gone through these sections else complete first.</b></h3>
+
+
+                </div>
+                <form action="" class="px-5">
+                    <input type="checkbox" id="aim" class="check" onclick=quiz() name="aim" value="Bike">
+                    <label for="aim"> AIM </label><br>
+                    <input type="checkbox" id="theory" class="check" onclick=quiz() name="theory" value="Car">
+                    <label for="theory"> THEORY </label><br>
+                    <input type="checkbox" id="simulation" class="check" onclick=quiz() name="simulation" value="Boat">
+                    <label for="simulation"> SIMULATION </label><br>
+                    <input type="checkbox" id="practice" class="check" onclick=quiz() name="practice" value="Boat">
+                    <label for="practice"> PRACTICE </label><br>
+                    
+                    <div class="border-2 border-black px-2 my-2  rounded-md shadow-xl inline-block hover:opacity-50 cursor-pointer" id="sim"><a  href="./quiz/index.html" target="_self" ><h2 class="">LET'S TACKLE</h2></a></div>
+                  </form>
+            </div>
+
+            <div class="box">
+                <div class="title" id="references">
+                    <h2 class="heading">References</h2>
+                </div>
+                <div class='md:flex justify-around pb-5'>
+                    <div class='p-5'>
+                        <ul class=" marker:text-black mt-8 mb-4 list-disc list-inside bg-black-400">
+                            <li class="pb-3 no-underline hover:underline  "><a href="https://www.geeksforgeeks.org/sorting-algorithms/" >Sorting Algorithms : Geeks for Geeks</a></li>
+                            <li class="pb-3 no-underline hover:underline  "><a href="https://www.programiz.com/dsa/insertion-sort" >Insertion Sort (With Code in Python/C++/Java/C) - Programiz</a></li>
+                            <li class="pb-3 no-underline hover:underline  "><a href="https://www.tutorialspoint.com/data_structures_algorithms/insertion_sort_algorithm.htm" >Data Structure and Algorithms Insertion Sort - Tutorialspoint</a></li>
+                            <li class="pb-3  ">Kleinberg, J., & Tardos, E. (2013). Algorithm Design. 1st edition. Pearson Education 
+        India. Additional Resources</li>
+                            <li class="pb-3  ">Cormen, T.H., Leiserson, C.E. Rivest, R.L., & Stein, C.(2015). Introduction to Algorithms. 
+        3rd edition. PHI.</li>
+        
+                        </ul>
+                    </div>
+                    <img alt='reference' class="mt-10" src='./Assets/reference.png'/>
+                </div>
+            </div>
+
+            <!-- <div class="box" id="result">
+                <div class="title">
+                    <h2 class="heading">Feedback</h2>
+                </div>
+                
+            </div> -->
+        </div>
+    </section>
+    <script src="js/dataFrame.js?v=1"></script>
+    <!-- Index.js -->
+    <script src="./index.js"></script>
+</body>
+
+</html>
