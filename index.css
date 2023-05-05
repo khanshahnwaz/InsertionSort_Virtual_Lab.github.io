@@ -9,7 +9,7 @@
     flex-wrap: wrap;
     margin: auto;
     color: white;
-    font: 900 normal 2.5em 'tahoma';
+    font: 900 normal  'tahoma';
     text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
   }
   .animate
@@ -728,8 +728,10 @@ nav .boxq a img {
   .content h2 {
     color: transparent;
     -webkit-text-stroke: 2px rgb(0, 30, 37);
-    font-size: 3em;
+    
   }
   
-  
+  @media screen {
+    
+  }
  
