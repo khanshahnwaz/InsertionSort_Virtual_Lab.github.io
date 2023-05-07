@@ -2,14 +2,16 @@ let burger = document.getElementById('burger'),
           nav    = document.getElementById('main-nav'),
         slowmo = document.getElementById('slowmo');
    
+        function handleNav(){
+            burger.classList.toggle('is-open');
+            nav.classList.toggle('is-open');
+        }
    burger.addEventListener('click', function(e){
        this.classList.toggle('is-open');
        nav.classList.toggle('is-open');
    });
    
-   slowmo.addEventListener('click', function(e){
-       this.classList.toggle('is-slowmo');
-   });
+   
    
    /* Onload demo - dirty timeout */
    let clickEvent = new Event('click');
