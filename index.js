@@ -4,7 +4,13 @@ const icon=document.getElementsByClassName('icon');
 
 document.addEventListener("scroll", (e) => {
     var scrolled = document.scrollingElement.scrollTop;
-    if (scrolled >= 270) {
+    if (scrolled >= 270 && window.innerWidth>768) {
+      console.log("Scree width ",window.innerWidth)
+      // if(window.innerWidth<=800){
+      //   target.style.display='none'
+      // }else{
+        // target.style.display='block'
+
         const styles = {
             position: 'fixed',
             top: 0,
@@ -23,10 +29,12 @@ document.addEventListener("scroll", (e) => {
         for (let i=0;i<navBox.length;i++){
             navBox[i].style.height='100%';
             icon[i].style.display='none';
-            
+          
         }
+        // }
     } else {
         // setScrollState("static");
+        if(window.innerWidth>=768){
         const styles={
             position:'static',
             margin:'50px 20px',
@@ -38,6 +46,7 @@ document.addEventListener("scroll", (e) => {
             icon[i].style.display='inline-block'
         }
     }
+  }
 });
 
 

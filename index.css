@@ -135,7 +135,7 @@ header .navigation li a {
     width: 600px;
 }
 @media screen and (max-width: 1000px) {
-    nav{
+    #nav{
         margin: 24px 20px;
     }
     header {
@@ -268,13 +268,13 @@ header .navigation li a {
         font-size: 0.2rem;
     }
 }
-nav {
+#nav {
     font-size: 1rem;
     border-radius: 10px;
     height: auto;
     background: rgb(0, 30, 37);
     margin: 50px 20px;
-    display: flex;
+    /* display: flex; */
     flex-flow: wrap row;
     justify-content: space-around;
     font-weight: bold;
@@ -282,7 +282,7 @@ nav {
     z-index: 1;
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
 }
-nav .boxq {
+#nav .boxq {
     transition: 0.4s ease;
     height: 100px;
     width: 115px;
@@ -293,18 +293,18 @@ nav .boxq {
     display: flex;
     align-items: center;
 }
-nav .boxq:hover {
+#nav .boxq:hover {
     background: rgba(0, 255, 255, 0.589);
     color: white;
 }
-nav .boxq a {
+#nav .boxq a {
     display: block;
     margin-left: auto;
     margin-right: auto;
     text-decoration: none;
     color: white;
 }
-nav .boxq a img {
+#nav .boxq a img {
     margin-bottom: 2px;
 }
 .exp-heading {
@@ -531,7 +531,7 @@ header .navigation li a {
     border-radius: 3px;
 }
 @media screen and (max-width: 1000px) {
-    nav{
+    #nav{
         margin: 24px 20px;
     }
     header {
@@ -597,13 +597,13 @@ header .navigation li a {
         font-size: 0.6rem;
     }
 }
-nav {
+#nav {
     font-size: 1rem;
     border-radius: 10px;
     height: auto;
     background: rgb(0, 30, 37);
     margin: 50px 20px;
-    display: flex;
+    /* display: flex; */
     flex-flow: wrap row;
     justify-content: space-around;
     font-weight: bold;
@@ -611,7 +611,7 @@ nav {
     z-index: 1;
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
 }
-nav .boxq {
+#nav .boxq {
     transition: 0.4s ease;
     height: 100px;
     width: 115px;
@@ -622,18 +622,18 @@ nav .boxq {
     display: flex;
     align-items: center;
 }
-nav .boxq:hover {
+#nav .boxq:hover {
     background: rgba(0, 255, 255, 0.589);
     color: white;
 }
-nav .boxq a {
+#nav .boxq a {
     display: block;
     margin-left: auto;
     margin-right: auto;
     text-decoration: none;
     color: white;
 }
-nav .boxq a img {
+#nav .boxq a img {
     margin-bottom: 2px;
 }
 .exp-heading {
@@ -651,10 +651,10 @@ nav .boxq a img {
     width: 45px;
 }
 @media screen and (max-width:768px) {
-    nav {
+    #nav {
         font-size: 0.6rem;
     }
-    nav .boxq {
+    #nav .boxq {
         height: 50px;
         width: 75px;
     }
@@ -727,11 +727,13 @@ nav .boxq a img {
   
   .content h2 {
     color: transparent;
-    -webkit-text-stroke: 2px rgb(0, 30, 37);
+    -webkit-text-stroke: 2px rgb(0, 62, 62);
     
   }
   
-  @media screen {
-    
+  @media screen and (max-width: 768px){
+     #nav{
+        display: 'none';
+     }
   }
  

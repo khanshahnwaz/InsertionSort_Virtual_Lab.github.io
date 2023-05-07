@@ -14,6 +14,8 @@
 
     <!-- Tailwind css CDN link -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Responsive header css -->
+    <link rel="stylesheet" href="/ResponsiveNav/RestNav.css"/>
     
 </head>
 
@@ -34,7 +36,7 @@
     <div class="exp-heading">
         <h1 class="text-4xl tracking-wider font-bold">Insertion Sort</h1>
     </div>
-    <nav id="nav">
+    <nav id="nav" class="hidden md:flex">
         <div class="boxq">
             <a class="internal_link" href="#aim">
                 <img class="icon"
@@ -263,7 +265,7 @@ insertion sort with the help of examples and animations.
                     <p class="text-justify justify-both">You will see a line by line execution of code i.e. how each line of insertion sort algoritm affects the unsorted array in order to sort it. </p>
                     <p class="text-justify
                     ">Try Yourself section presents some incomplete code snippets. You will try and complete those.</p>
-                    <div class="mt-4 inline-block px-4 py-1 rounded-md shadow-md hover:opacity-50 cursor-pointer bg-[#001E25] text-white font-bold md:text-lg">
+                    <div class="mt-4 inline-block px-4 py-1 rounded-md shadow-md hover:opacity-50 cursor-pointer bg-[#003E3E] text-white font-bold md:text-lg">
                     <a  href="./simulation/index.html ">Try It</a></div>
                 </div>
                   </div>
@@ -326,9 +328,50 @@ insertion sort with the help of examples and animations.
             </div> -->
         </div>
     </section>
+
+    <!-- Responsive header -->
+    <div class='block md:hidden'>
+        <button id="slowmo">
+            <!-- {/* Slow motion <span>mode</span> */} -->
+            </button> 
+
+<div class="device">
+	<div class="container">
+		<button id="burger" class="open-main-nav">
+			<span class="burger"></span>
+			<span class="burger-text">Menu</span>  
+		</button>      
+		<nav class='main-nav' id="main-nav">    
+			<ul class="">
+				<li >
+					<a href="../index.html#aim">Aim</a>
+				</li>
+				<li>
+					<a href="../index.html#theory">Theory</a>
+				</li>
+				<li>
+					<a href="../index.html#procedure">Procedure</a>
+				</li>
+				<li>
+					<a href="../index.html#practice">Working</a>
+				</li> 
+				<li>
+					<a href="../index.html#simulation">Simulation</a>
+				</li>
+                <li>
+					<a href="../index.html#quiz">Quiz</a>
+				</li>
+			</ul>
+		</nav> 
+		<!-- {/* <p class="notice">Design Copyright <strong>Stéphanie Walter</strong><br/><a href="https://stephaniewalter.design/" target="_blank">StephanieWalter.Design</a></p> */} -->
+	</div>
+</div></div>
+
     <script src="js/dataFrame.js?v=1"></script>
     <!-- Index.js -->
     <script src="./index.js"></script>
+    <!-- Responsive navbar js -->
+    <script src="./ResponsiveNav/ResNav.js"></script>
 </body>
 
 </html>
