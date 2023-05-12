@@ -10,7 +10,10 @@ let burger = document.getElementById('burger'),
        this.classList.toggle('is-open');
        nav.classList.toggle('is-open');
    });
-   
+   const closeNav=()=>{
+    let burger = document.getElementById('burger');
+    burger.click();
+}
     
    
    /* Onload demo - dirty timeout */
