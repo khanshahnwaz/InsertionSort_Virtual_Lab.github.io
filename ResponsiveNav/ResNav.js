@@ -11,7 +11,7 @@ let burger = document.getElementById('burger'),
        nav.classList.toggle('is-open');
    });
    
-   
+    
    
    /* Onload demo - dirty timeout */
    let clickEvent = new Event('click');
