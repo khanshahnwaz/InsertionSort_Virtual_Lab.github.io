@@ -3,9 +3,10 @@ const navBox=document.getElementsByClassName('boxq');
 const icon=document.getElementsByClassName('icon');
 
 document.addEventListener("scroll", (e) => {
-    var scrolled = document.scrollingElement.scrollTop;
+  var scrolled = document.scrollingElement.scrollTop;
+
     if (scrolled >= 270 && window.innerWidth>768) {
-      console.log("Scree width ",window.innerWidth)
+      // console.log("Scree width ",window.innerWidth)
       // if(window.innerWidth<=800){
       //   target.style.display='none'
       // }else{
@@ -53,7 +54,7 @@ document.addEventListener("scroll", (e) => {
 
 
 // Code for text animation in practice section
-var words = ['Welcome to the working section of Insertion Sort! ', 'Here, you can see how the elements actually change their positions.', 'With a variety of colorful representations,', ' So, get ready to flex your brain muscles', 'And see how elements sorts!'],
+var words = ['Welcome to the working section of Insertion Sort! Here, you can see how the elements actually change their positions. With a variety of colorful representations. So, get ready to flex your brain muscles and see how elements sorts!'],
     part,
     i = 0,
     offset = 0,
@@ -61,14 +62,17 @@ var words = ['Welcome to the working section of Insertion Sort! ', 'Here, you ca
     forwards = true,
     skip_count = 0,
     skip_delay = 15,
-    speed = 60;
+    speed = 40;
 var wordflick = function() {
     console.log("hedkfd")
-  setInterval(function () {
+   const inte= setInterval(function () {
     if (forwards) {
       if (offset >= words[i].length) {
         ++skip_count;
         if (skip_count == skip_delay) {
+          // if(i==len-1){
+          //   clearInterval(inte);
+          // }
           forwards = false;
           skip_count = 0;
         }
@@ -80,6 +84,7 @@ var wordflick = function() {
         i++;
         offset = 0;
         if (i >= len) {
+          console.log("Last text reached.")
           i = 0;
         }
       }
@@ -99,9 +104,17 @@ var wordflick = function() {
     document.getElementsByClassName('word')[0].textContent=part;
     // $('.word').text(part);
   },speed);
+  document.getElementsByClassName('word')[0].textContent=words[words.length-1]
+  console.log("I am out from interval.")
 };
-// document.onload=wordflick();
-document.addEventListener('onload',wordflick());
+
+
+  document.addEventListener('onload',wordflick());
+
+
+
+// if(scrolled>500)
+// console.log(document.getElementById('practice').checkVisibility())
 // $(document).ready(function () {
 //   wordflick();
 // });
